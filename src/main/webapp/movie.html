@@ -1,0 +1,79 @@
+<html>
+	<header>
+		<title>MovieGenie</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--<script src="script.js"></script>-->
+				
+				
+    <link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="star-rating.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="jquery.min.js"></script>
+    <script src="star-rating.js" type="text/javascript"></script>
+	
+
+	<script >
+			$(input-21c).click(function() {
+  			$(submit).click();
+				});
+	</script>	
+		
+
+		
+	</header>
+	<body>
+		
+		<div class="container">
+			<div>
+				<table class="table">
+					<td>
+						<img src="poster.jpg">
+					</td>
+					<td></td>
+					<td>
+						<table class="table table-hover">
+							<tr>
+								<td><h3>Avatar</h3></td>
+								<td>
+									<h3>(2009)</h3>									
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<form name"rate" method ="get" action="/rate">
+									<input id="input-21c" value="5" type="number" class="rating" min=0 max=5 step=0.5 
+									data-size="xs" data-stars="5" name="rating">
+									<input type="submit" id="submit"> 
+									</form>
+									
+
+								</td>
+							</tr>
+																	
+							<tr>
+								<td>Director</td>
+								<td>James Cameron</td>
+							</tr>
+							<tr>
+								<td>Actors</td>
+								<td>Sam Worthington, Zoe Saldana, Sigourney Weaver</td>
+							</tr>
+							<tr>
+								<td>Plot</td>
+								<td id="MoviePlot">A paraplegic marine dispatched to the moon Pandora on a 
+									unique mission becomes torn between following his orders and protecting the
+									 world he feels is his home.
+							 	</td>
+							</tr>
+						</table>
+					</td>
+				</table>
+			</div>
+			<div>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/5PSNL1qE6VY" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+
+	</body>
+</html>

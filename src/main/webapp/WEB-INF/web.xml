@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ The ASF licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+    Following class has been replace with RecommenderServlet for kidscart
+    <servlet-class>org.apache.mahout.cf.taste.web.RecommenderServlet</servlet-class>
+-->
+    <!--<servlet>
+
+        <servlet-name>ServletRating</servlet-name>
+        <servlet-class>com.prashanna.servlet.ServletRating</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletRating</servlet-name>
+        <url-pattern>/rate</url-pattern>
+    </servlet-mapping>-->
+    <servlet>
+        <servlet-name>Anonymous-movie-recommender</servlet-name>
+        <!--        <display-name>movieGEN Recommender</display-name>
+        <description>recommender servlet by prashnna</description>-->
+        <servlet-class>com.prashanna.mahout_webservice.AnonymousRecommenderServlet</servlet-class>
+        <init-param>
+            <!--        <param-name>recommender-class</param-name>
+            <param-value>com.prashanna.RecMovie</param-value>-->
+            <param-name>Anonymous-recommender-class</param-name>
+            <param-value>com.prashanna.RecMovieAnonymous</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>servletsd</servlet-name>
+        <servlet-class>com.prashanna.mahout_webservice.servletsd</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RatingContrl</servlet-name>
+        <servlet-class>com.prashanna.RatingContrl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Anonymous-movie-recommender</servlet-name>
+        <url-pattern>/AnonyRecommenderServlet</url-pattern>
+    </servlet-mapping>
+    <!--    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list> -->
+    <servlet-mapping>
+        <servlet-name>servletsd</servlet-name>
+        <url-pattern>/se</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>servletrating</servlet-name>
+        <servlet-class>com.prashanna.mahout_webservice.ServletRating</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletrating</servlet-name>
+        <url-pattern>/rate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RatingContrl</servlet-name>
+        <url-pattern>/RatingContrl</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>newindex.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
